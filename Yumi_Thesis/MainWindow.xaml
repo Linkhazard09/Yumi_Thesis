@@ -4,9 +4,65 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yumi_Thesis"
+        Background="LightBlue"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="567.6" Width="971.9">
+    <Grid Margin="0,0,-0.4,1.4">
+        <Image x:Name="Start_Image"  MouseLeftButtonUp="Start_Image_MouseLeftButtonUp" Source="/Images/images.jpg" Stretch="Fill" HorizontalAlignment="Center" Margin="0,0,0,0" Width="317" Height="181" VerticalAlignment="Center">
+            <Image.Effect>
+                <BlurEffect Radius="35"></BlurEffect>
+            </Image.Effect> 
+        </Image>
+        <Button x:Name="AVPFS_Button" Margin="75,35,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top" Click="AVPFS_Button_Click">
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap"> Avoid People With Flu-like Symptoms</TextBlock>
+        </Button>
+        <Button x:Name="F_Button" Content="Fever" Margin="75,83,0,0" Click="F_Button_Click" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="SB_Button" Click="SB_Button_Click" Content="Shortness of Breath" Margin="75,134,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="CC_Button" Click="CC_Button_Click" Content="Cough or Cold" Margin="75,297,0,0" RenderTransformOrigin="0.506,4.746" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="DB_Button" Click="DB_Button_Click" Content="Difficulty in Breathing" Margin="75,350,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="ACA_Button" Click="ACA_Button_Click" Content="Avoid Contact with Animals" Margin="75,408,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="DEH_Button" Click="DEH_Button_Click" Content="Drink and Eat Healthy" Margin="75,467,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="WFM_Button" Click="WFM_Button_Click" Content="Wear Face Mask" Margin="75,185,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="CFCS_Button" Click="CFCS_Button_Click" Margin="0,35,100,0" Height="37" VerticalAlignment="Top" HorizontalAlignment="Right" Width="158">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Cover Face When Coughing or Sneezing</TextBlock>
+        </Button>
+        <Button x:Name="CDSMH_Button" Click="CDSMH_Button_Click" Margin="0,35,506,0" Height="37" VerticalAlignment="Top" HorizontalAlignment="Right" Width="158">
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap">Consult Doctor/Seek Medical Health</TextBlock>
+        </Button>
+
+        <Button x:Name="GITS_Button" Click="GITS_Button_Click"  Margin="0,142,99.2,0" HorizontalAlignment="Right" Width="158" Height="37" VerticalAlignment="Top">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Get Information from Trusted Sources</TextBlock>
+        </Button>
+        <Button x:Name="WH_Button" Click="WH_Button_Click" Content="Wash Hands" HorizontalAlignment="Right" Margin="0,244,99.2,0" VerticalAlignment="Top" Width="158" Height="37"/>
+        <Button x:Name="USH_Button" Click="USH_Button_Click" Content="Use Hand Sanitizer" HorizontalAlignment="Right" Margin="0,193,99.2,0" VerticalAlignment="Top" Width="158" Height="37"/>
+        <Button x:Name="DD_Button" Click="DD_Button_Click"   HorizontalAlignment="Right" Margin="0,350,99.2,0" Width="158" RenderTransformOrigin="0.506,4.746" Height="37" VerticalAlignment="Top">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Decontaminate Or Disinfect</TextBlock>
+        </Button>
+        <Button x:Name="ATYF_Button" Click="ATYF_Button_Click"  HorizontalAlignment="Right" Margin="0,297,99.2,0" Width="158" RenderTransformOrigin="1.114,-0.378" Height="37" VerticalAlignment="Top">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Avoid Touching Your Face</TextBlock>
+        </Button>
+        <Button x:Name="WCP_Button" Click="WCP_Button_Click"  Content="Wash Clothes Properly" Margin="0,408,99.2,0" HorizontalAlignment="Right" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="ATPKC_Button" Click="ATPKC_Button_Click"  HorizontalAlignment="Right" Margin="0,467,99.2,0" Width="158" Height="37" VerticalAlignment="Top">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Avoid Travelling to Places with Known Cases</TextBlock>
+        </Button>
+        <Button x:Name="SHHQ_Button" Click="SHHQ_Button_Click" Margin="75,244,0,0" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="158">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Stay at Home/ Home Quarantine</TextBlock>
+        </Button>
+        <Button x:Name="SD_Button" Click="SD_Button_Click"  Content="Social Distancing" HorizontalAlignment="Right" Margin="0,83,99.6,0" Width="158" Height="37" VerticalAlignment="Top"/>
+        <Button x:Name="ASPLSG_Button" Click="ASPLSG_Button_Click"  HorizontalAlignment="Right" Margin="0,35,310.4,0" Width="158" Height="37" VerticalAlignment="Top">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Avoid Social Places/Limit Social Gatherings</TextBlock>
+        </Button>
+        <Button x:Name="DTFMWC_Button" Click="DTFMWC_Button_Click"  HorizontalAlignment="Center" Margin="0,30" VerticalAlignment="Bottom" Width="158" Height="37">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Dispose Tissue and Facemask in Waste Cans</TextBlock>
+        </Button>
+        <Label Content="Next" FontSize="50" MouseLeftButtonUp="Label_MouseLeftButtonUp" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="371,0,0,118" Width="215" Height="77" VerticalAlignment="Bottom"/>
+
+
+
     </Grid>
+    
+    
 </Window>
+
+
+   
