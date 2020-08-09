@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:Yumi_Thesis"
              StartupUri="ParticipantEntry.xaml">
     <Application.Resources>
-         
+        <Style x:Key="custom">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Bebas Neue"/>
+        </Style>
+        <Style x:Key="RegularText">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/MADETOMMYMedium_PERSONALUSE.otf#MADE TOMMY"/>
+        </Style>
+
+
+
+
+
+
     </Application.Resources>
 </Application>
