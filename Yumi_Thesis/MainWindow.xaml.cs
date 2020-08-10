@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Yumi_Thesis
         public string ParticipantName;
         public string[] Answers = { "", "", "", "", "", "", "" };
         public int AnswerCounter = 0;
-        public string PreviousFN;
+        public string PreviousFN="none";
         public string CurrentImage;
         public string FirstAnswer ="";
         Stopwatch StpWatch = new Stopwatch();
@@ -48,12 +49,18 @@ namespace Yumi_Thesis
             int x = 0;
             foreach(string i in FN)
             {
-                for (int z = 0; z != 5; z++)
-                Function.Add(IF[z]+i  +".jpg");
+                for (int z = 0; z < 5; z++)
+                Function.Add(IF[z] + i  +".jpg");
                 x++;
             }
 
             Next_Button.IsEnabled = false;
+
+
+            ExcelIntegration excel = new ExcelIntegration();
+
+
+            excel.CreateExcel();
            
 
         }
@@ -78,27 +85,36 @@ namespace Yumi_Thesis
 
         private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
-            bool isCorrect = CurrentImage.Contains(currentAnswer) ;
+            ExcelIntegration excel = new ExcelIntegration();
+            bool isCorrect = CurrentImage.Contains(currentAnswer);
             StpWatch.Stop();
             string ms = StpWatch.Elapsed.ToString(@"ms");
             int Secs = Convert.ToInt32(StpWatch.Elapsed.TotalSeconds);
             string TotalTime = Secs + ":" + ms;
-            
-
-
-
+            string accuracy="0";
 
 
             if (isCorrect)
-                MessageBox.Show("Correct");
-            else
-                MessageBox.Show("Incorrect");
+                accuracy = "1";
 
-           
+            if (upperLim == 0)
+            {
+                MessageBox.Show("The matching test experiment has been completed you will now be redirected to part 2 which is the preference test experiment.");
+                this.Close();
+            }
 
 
 
+            string Current = CurrentImage.Substring(0, 3);
+            excel.WriteToExcel(ParticipantName,Current,accuracy,TotalTime,Answers);
+
+
+
+
+
+
+
+            //Code below is for reset of controls
             currentAnswer = "" ;
             Start_Label.IsEnabled = true;
             Start_Label.Content = "Start";
@@ -109,8 +125,9 @@ namespace Yumi_Thesis
                 Answers[ctr] = "";
                 ctr++;
             }
-
-
+            AnswerCounter =0;
+            StpWatch.Reset();
+            Next_Button.IsEnabled = false ;
 
         }
 
@@ -426,11 +443,20 @@ namespace Yumi_Thesis
         {
             Random R1 = new Random();
             int Index = R1.Next(0, upperLim);
-            string imgSource = "/Images/"+Function[Index];
-            PreviousFN = Function[Index].Substring(0, 3);
+            string imgSource = "/Images/"+ Function[Index];
+
+           while(imgSource.Contains(PreviousFN) & upperLim >10)
+            {
+                R1 = new Random();
+                Index = R1.Next(0, upperLim);
+                imgSource = "/Images/" + Function[Index];
+            }
+
+            PreviousFN = Function[Index].Substring(1, 2);
+            CurrentImage = Function[Index];
             Function.RemoveAt(Index);
             upperLim = Function.Count();
-            CurrentImage = Function[Index];
+           
            
             Start_Image.Source = new BitmapImage(new Uri(imgSource,UriKind.Relative));
             Start_Label.Content = "";
