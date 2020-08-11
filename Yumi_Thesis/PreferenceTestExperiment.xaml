@@ -1,0 +1,64 @@
+﻿<Window x:Class="MatchingTestExperiment.PreferenceTestExperiment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatchingTestExperiment"
+        mc:Ignorable="d"
+        Title="Preference Test Experiment" Height="680.8" Width="1147.9">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="FunctionImage" Stretch="Fill" Source="C:\Users\Matthew Rivera\Documents\Yumi\Yumi_Thesis\Yumi_Thesis\Images\C18.jpg" Margin="60,114,0,0" HorizontalAlignment="Left" Width="270" Height="270" VerticalAlignment="Top"/>
+        <Rectangle Margin="60,114,0,0" Stroke="Black" HorizontalAlignment="Left" Width="270" Height="270" VerticalAlignment="Top"/>
+        <Label Content="Function Name" Style="{StaticResource custom}" FontSize="22" Margin="140,384,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top"></Label>
+        <TextBlock x:Name="Function_Name" TextAlignment="Center" TextWrapping="Wrap" Style="{StaticResource Light}" Text="Wash Clothes Properly" FontSize="25" Margin="34,421,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="82" Width="332"/>
+        <Label Content="What do you think of the icon?" Style="{StaticResource custom}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,12,411.2,0" ></Label>
+        <Label Content="Unlikeable" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,58,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Ugly" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,95,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Ineffective" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,132,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Vague" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,169,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Weak" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,206,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Unfamiliar" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,243,525.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Complex" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,280,525.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Disorganized" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,317,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Cluttered" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,354,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Likeable" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,58,62.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Beautiful" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,95,59.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Effective" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,132,57.2,0" Height="37" VerticalAlignment="Top"/>
+
+        <Label Content="Clear" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,169,89.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Strong" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,206,76.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Familiar" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,243,66.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Simple" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,280,75.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Organized" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,317,41.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Uncluttered" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,354,30.2,0" Height="37" VerticalAlignment="Top"/>
+        <TextBlock Text="How close do you think is the icon to its intended meaning?" TextWrapping="Wrap" Style="{StaticResource custom}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,396,294.2,0" Width="431" />
+
+        <Label Content="Unrecognizable" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,466,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Abstract" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,503,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Incompatible" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,540,523.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Recognizable" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,466,15.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Concrete" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,503,49.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Concrete" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,503,49.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label Content="Compatible" Style="{StaticResource Light}" HorizontalAlignment="Right" FontSize="20" Margin="0,540,28.2,0" Height="37" VerticalAlignment="Top"/>
+        <Label x:Name="NextLabel" HorizontalAlignment="Center" VerticalAlignment="Bottom" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" Content="NEXT" Style="{StaticResource custom}" FontSize="40" MouseLeftButtonUp="Label_MouseLeftButtonUp" Margin="516,0,515.2,0.2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Yumi_Thesis"
         Background="White"
         mc:Ignorable="d"
-        Title="Matching Test Experiment" Height="620.6" Width="988.8"
+        Title="Matching Test Experiment"  Height="620.6" Width="988.8"  MinHeight="620.6" MinWidth="988.8"  MaxHeight="620.6" MaxWidth="988.8"
         >
 
     <Grid>

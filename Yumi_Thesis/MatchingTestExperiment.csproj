@@ -84,10 +84,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PreferenceTestExperiment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ParticipantEntry.xaml.cs">
       <DependentUpon>ParticipantEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreferenceTestExperiment.xaml.cs">
+      <DependentUpon>PreferenceTestExperiment.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -123,6 +130,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\MADETOMMYMedium_PERSONALUSE.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\MADE TOMMY Light_PERSONAL USE.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <None Include="packages.config" />

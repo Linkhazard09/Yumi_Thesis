@@ -11,7 +11,9 @@
             <Setter Property="TextElement.FontFamily" Value="/Fonts/MADETOMMYMedium_PERSONALUSE.otf#MADE TOMMY"/>
         </Style>
 
-
+        <Style x:Key="Light">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/MADE TOMMY Light_PERSONAL USE.otf#MADE TOMMY"/>
+        </Style>
 
 
 

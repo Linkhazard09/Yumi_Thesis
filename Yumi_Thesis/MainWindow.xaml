@@ -4,63 +4,65 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yumi_Thesis"
+        xmlns:tools="clr-namespace:MyApp.Tools"
         Background="White"
         mc:Ignorable="d"
-        Title="Matching Test Experiment" Height="566.8" Width="915.1">
+        WindowStartupLocation="CenterScreen"
+        Title="Matching Test Experiment" MinHeight="570" MinWidth="925" MaxHeight="570" MaxWidth="925"  Height="570" Width="925">
     <Grid Margin="0,0,-0.4,1.4">
-        <Label x:Name="Start_Label" MouseLeftButtonUp="Start_Label_MouseLeftButtonUp" Content="Start" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontSize="55" VerticalContentAlignment="Center" Style="{StaticResource custom}" VerticalAlignment="Bottom" Width="350" Height="250" Margin="0,0,280.2,170" />
-        <Rectangle HorizontalAlignment="Center"  Stroke="Black" VerticalAlignment="Bottom" Width="350" Height="250" Margin="0,0,0,168.6" />
+        <Label x:Name="Start_Label" MouseLeftButtonUp="Start_Label_MouseLeftButtonUp" Content="Start" HorizontalContentAlignment="Center" FontSize="55" VerticalContentAlignment="Center" Style="{StaticResource custom}" Margin="285,110,280.6,0" Height="250" VerticalAlignment="Top" />
+        <Rectangle  Stroke="Black" Margin="283,112,282.6,168.6" />
 
 
 
-        <Rectangle HorizontalAlignment="Center" Margin="0,100" Width="180" Height="50" VerticalAlignment="Bottom" Stroke="Black"/>
+        <Rectangle Margin="368,380,367.6,100.6" Stroke="Black"/>
 
 
 
-        <Image x:Name="Start_Image"  MouseLeftButtonUp="Start_Image_MouseLeftButtonUp" Stretch="Fill" HorizontalAlignment="Center" Margin="291,125,292.2,184.4"  Width="326" Height="226" VerticalAlignment="Center"  />
-        <Button x:Name="AVPFS_Button" Margin="99,35,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top" Click="AVPFS_Button_Click">
+        <Image x:Name="Start_Image"  MouseLeftButtonUp="Start_Image_MouseLeftButtonUp" Stretch="Fill" Margin="294,122,295.6,182.6"  />
+        <ToggleButton x:Name="AVPFS_Button" Margin="657,435,100.6,58.6"  Checked="AVPFS_Button_Click">
             <TextBlock TextAlignment="Center" TextWrapping="Wrap"><Run Text="Avoid People With Flu-like Symptoms"/></TextBlock>
-        </Button>
-        <Button x:Name="F_Button" Content="Fever" Margin="99,0,0,415.4" Click="F_Button_Click" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="SB_Button" Click="SB_Button_Click" Content="Shortness of Breath" Margin="99,0,0,364.4" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="CC_Button" Click="CC_Button_Click" Content="Cough or Cold" Margin="99,0,0,213.4" RenderTransformOrigin="0.506,4.746" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="DB_Button" Click="DB_Button_Click" Content="Difficulty in Breathing" Margin="99,0,0,163.4" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="ACA_Button" Click="ACA_Button_Click" Content="Avoid Contact with Animals" Margin="99,0,0,115.4" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="DEH_Button" Click="DEH_Button_Click" Content="Drink and Eat Healthy" Margin="99,0,0,61.4" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="WFM_Button" Click="WFM_Button_Click" Content="Wear Face Mask" Margin="99,0,0,313.4" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="CFCS_Button" Click="CFCS_Button_Click" Margin="0,0,100.2,463.4" HorizontalAlignment="Right" Width="158" Height="37" VerticalAlignment="Bottom">
+        </ToggleButton>
+        <ToggleButton x:Name="F_Button" Content="Fever" Margin="98,78,659.6,415.6" HorizontalAlignment="Stretch" Checked="F_Button_Click"/>
+        <ToggleButton x:Name="SB_Button" Checked="SB_Button_Click" Content="Shortness of Breath" Margin="99,180,658.6,313.6"/>
+        <ToggleButton x:Name="CC_Button" Checked="CC_Button_Click" Content="Cough or Cold" Margin="99,129,658.6,364.6" RenderTransformOrigin="0.506,4.746"/>
+        <ToggleButton x:Name="DB_Button" Checked="DB_Button_Click" Content="Difficulty in Breathing" Margin="99,229,658.6,264.6"/>
+        <ToggleButton x:Name="ACA_Button" Checked="ACA_Button_Click" Content="Avoid Contact with Animals" Margin="374,435,383.6,58.6"/>
+        <ToggleButton x:Name="DEH_Button" Checked="DEH_Button_Click" Content="Drink and Eat Healthy" Margin="99,435,658.6,58.6"/>
+        <ToggleButton x:Name="WFM_Button" Checked="WFM_Button_Click" Content="Wear Face Mask" Margin="657,78,100.6,415.6"/>
+        <ToggleButton x:Name="CFCS_Button" Checked="CFCS_Button_Click" Margin="99,280,658.6,213.6">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Cover Face When Coughing or Sneezing"/></TextBlock>
-        </Button>
-        <Button x:Name="CDSMH_Button" Click="CDSMH_Button_Click" Margin="280,35,0,0" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="158">
-            <TextBlock TextAlignment="Center" TextWrapping="Wrap"><Run Text="Consult Doctor/Seek Medical Health"/></TextBlock>
-        </Button>
+        </ToggleButton>
+        <ToggleButton x:Name="CDSMH_Button" Checked="CDSMH_Button_Click" Margin="99,378,658.6,115.6">
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Width="139"><Run Text="Consult Doctor/Seek Medical Health"/></TextBlock>
+        </ToggleButton>
 
-        <Button x:Name="GITS_Button" Click="GITS_Button_Click"  Margin="0,0,100.2,364.4" HorizontalAlignment="Right" Width="158" Height="37" VerticalAlignment="Bottom">
+        <ToggleButton x:Name="GITS_Button" Checked="GITS_Button_Click"  Margin="657,129,100.6,364.6">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Get Information from Trusted Sources"/></TextBlock>
-        </Button>
-        <Button x:Name="WH_Button" Click="WH_Button_Click" Content="Wash Hands" HorizontalAlignment="Right" Margin="0,0,100.2,264.4" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="USH_Button" Click="USH_Button_Click" Content="Use Hand Sanitizer" HorizontalAlignment="Right" Margin="0,0,100.2,313.4" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="DD_Button" Click="DD_Button_Click"   HorizontalAlignment="Right" Margin="0,0,100.2,163.4" Width="158" RenderTransformOrigin="0.506,4.746" Height="37" VerticalAlignment="Bottom">
+        </ToggleButton>
+        <ToggleButton x:Name="WH_Button" Checked="WH_Button_Click" Content="Wash Hands" Margin="657,229,100.6,264.6"/>
+        <ToggleButton x:Name="USH_Button" Checked="USH_Button_Click" Content="Use Hand Sanitizer" Margin="657,180,100.6,313.6"/>
+        <ToggleButton x:Name="DD_Button" Checked="DD_Button_Click" Margin="657,330,100.6,163.6" RenderTransformOrigin="0.506,4.746">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Decontaminate Or Disinfect"/></TextBlock>
-        </Button>
-        <Button x:Name="ATYF_Button" Click="ATYF_Button_Click"  HorizontalAlignment="Right" Margin="0,0,100.2,213.4" Width="158" RenderTransformOrigin="1.114,-0.378" Height="37" VerticalAlignment="Bottom">
+        </ToggleButton>
+        <ToggleButton x:Name="ATYF_Button" Checked="ATYF_Button_Click" Margin="99,330,658.6,163.6" RenderTransformOrigin="1.114,-0.378">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Avoid Touching Your Face"/></TextBlock>
-        </Button>
-        <Button x:Name="WCP_Button" Click="WCP_Button_Click"  Content="Wash Clothes Properly" Margin="0,0,100.2,115.4" HorizontalAlignment="Right" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="ATPKC_Button" Click="ATPKC_Button_Click"  HorizontalAlignment="Right" Margin="0,0,100.2,61.4" Width="158" Height="37" VerticalAlignment="Bottom">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Avoid Travelling to Places with Known Cases"/></TextBlock>
-        </Button>
-        <Button x:Name="SHHQ_Button" Click="SHHQ_Button_Click" Margin="99,0,0,264.4" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Bottom">
+        </ToggleButton>
+        <ToggleButton x:Name="WCP_Button" Checked="WCP_Button_Click"  Content="Wash Clothes Properly" Margin="657,378,100.6,115.6"/>
+        <ToggleButton x:Name="ATPKC_Button" Checked="ATPKC_Button_Click" Margin="99,30,659.6,463.6" HorizontalAlignment="Stretch">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="35"><Run Text="Avoid Travelling to Places with Known Cases"/></TextBlock>
+        </ToggleButton>
+        <ToggleButton x:Name="SHHQ_Button" HorizontalAlignment="Stretch"  Checked="SHHQ_Button_Click" Margin="285,30,472.6,463.6">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Stay at Home/ Home Quarantine"/></TextBlock>
-        </Button>
-        <Button x:Name="SD_Button" Click="SD_Button_Click"  Content="Social Distancing" HorizontalAlignment="Right" Margin="0,0,100.2,415.4" Width="158" Height="37" VerticalAlignment="Bottom"/>
-        <Button x:Name="ASPLSG_Button" Click="ASPLSG_Button_Click" Margin="470,35,0,0" HorizontalAlignment="Left" Width="158" Height="37" VerticalAlignment="Top">
+        </ToggleButton>
+        <ToggleButton x:Name="SD_Button" Checked="SD_Button_Click" HorizontalAlignment="Stretch"  Content="Social Distancing" Margin="657,30,100.6,463.6"/>
+        <ToggleButton x:Name="ASPLSG_Button" Checked="ASPLSG_Button_Click" Margin="475,30,282.6,463.6" HorizontalAlignment="Stretch">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Avoid Social Places/Limit Social Gatherings"/></TextBlock>
-        </Button>
-        <Button x:Name="DTFMWC_Button" Click="DTFMWC_Button_Click"  HorizontalAlignment="Center" Margin="0,30" VerticalAlignment="Bottom" Width="158" Height="37">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Dispose Tissue and Facemask in Waste Cans"/></TextBlock>
-        </Button>
-        <Label x:Name="Next_Button" Content="Next" FontSize="35" MouseLeftButtonUp="Label_MouseLeftButtonUp" HorizontalContentAlignment="Center" Style="{StaticResource custom}" HorizontalAlignment="Center" Margin="0,100" Width="180" Height="50" VerticalAlignment="Bottom"/>
+        </ToggleButton>
+        <ToggleButton x:Name="DTFMWC_Button" Checked="DTFMWC_Button_Click" Margin="657,280,100.6,213.6">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="148" Height="35"><Run Text="Dispose Tissue and Facemask in Waste Cans"/></TextBlock>
+        </ToggleButton>
+        <Label x:Name="Next_Button" Content="Next" FontSize="35" MouseLeftButtonUp="Label_MouseLeftButtonUp" HorizontalContentAlignment="Center" Style="{StaticResource custom}" Margin="368,380,367.6,100.6"/>
         <Label Content="Images Remaining:" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top"/>
         <Label x:Name="ImagesCounter" Content="100" HorizontalAlignment="Right" VerticalAlignment="Top"  ></Label>
 
