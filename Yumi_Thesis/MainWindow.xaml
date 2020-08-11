@@ -61,7 +61,8 @@
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Dispose Tissue and Facemask in Waste Cans"/></TextBlock>
         </Button>
         <Label x:Name="Next_Button" Content="Next" FontSize="35" MouseLeftButtonUp="Label_MouseLeftButtonUp" HorizontalContentAlignment="Center" Style="{StaticResource custom}" HorizontalAlignment="Center" Margin="0,100" Width="180" Height="50" VerticalAlignment="Bottom"/>
-
+        <Label Content="Images Remaining:" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top"/>
+        <Label x:Name="ImagesCounter" Content="100" HorizontalAlignment="Right" VerticalAlignment="Top"  ></Label>
 
 
     </Grid>

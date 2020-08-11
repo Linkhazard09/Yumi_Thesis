@@ -37,6 +37,8 @@ namespace Yumi_Thesis
         public string PreviousFN="none";
         public string CurrentImage;
         public string FirstAnswer ="";
+        public string[] Sequence = new string[105];
+        int SequenceCounter = 0;
         Stopwatch StpWatch = new Stopwatch();
         
      
@@ -59,9 +61,31 @@ namespace Yumi_Thesis
 
             ExcelIntegration excel = new ExcelIntegration();
 
-
+            ImagesCounter.Content = upperLim.ToString();
             excel.CreateExcel();
-           
+
+            F_Button.IsEnabled = false;
+            AVPFS_Button.IsEnabled = false;
+            SB_Button.IsEnabled = false;
+            CC_Button.IsEnabled = false;
+            DB_Button.IsEnabled = false;
+            ACA_Button.IsEnabled = false;
+            DEH_Button.IsEnabled = false;
+            WFM_Button.IsEnabled = false;
+            CFCS_Button.IsEnabled = false;
+            CDSMH_Button.IsEnabled = false;
+            GITS_Button.IsEnabled = false;
+            WH_Button.IsEnabled = false;
+            USH_Button.IsEnabled = false;
+            DD_Button.IsEnabled = false;
+            ATYF_Button.IsEnabled = false;
+            WCP_Button.IsEnabled = false;
+            ATPKC_Button.IsEnabled = false;
+            SHHQ_Button.IsEnabled = false;
+            SD_Button.IsEnabled = false;
+            ASPLSG_Button.IsEnabled = false;
+            DTFMWC_Button.IsEnabled = false;
+
 
         }
 
@@ -103,7 +127,7 @@ namespace Yumi_Thesis
                 this.Close();
             }
 
-
+            ImagesCounter.Content = upperLim.ToString();
 
             string Current = CurrentImage.Substring(0, 3);
             excel.WriteToExcel(ParticipantName,Current,accuracy,TotalTime,Answers);
@@ -128,6 +152,27 @@ namespace Yumi_Thesis
             AnswerCounter =0;
             StpWatch.Reset();
             Next_Button.IsEnabled = false ;
+            F_Button.IsEnabled = false;
+            AVPFS_Button.IsEnabled = false;
+            SB_Button.IsEnabled = false;
+            CC_Button.IsEnabled = false;
+            DB_Button.IsEnabled = false;
+            ACA_Button.IsEnabled = false;
+            DEH_Button.IsEnabled = false;
+            WFM_Button.IsEnabled = false;
+            CFCS_Button.IsEnabled = false;
+            CDSMH_Button.IsEnabled = false;
+            GITS_Button.IsEnabled = false;
+            WH_Button.IsEnabled = false;
+            USH_Button.IsEnabled = false;
+            DD_Button.IsEnabled = false;
+            ATYF_Button.IsEnabled = false;
+            WCP_Button.IsEnabled = false;
+            ATPKC_Button.IsEnabled = false;
+            SHHQ_Button.IsEnabled = false;
+            SD_Button.IsEnabled = false;
+            ASPLSG_Button.IsEnabled = false;
+            DTFMWC_Button.IsEnabled = false;
 
         }
 
@@ -454,6 +499,8 @@ namespace Yumi_Thesis
 
             PreviousFN = Function[Index].Substring(1, 2);
             CurrentImage = Function[Index];
+            Sequence[SequenceCounter] = imgSource;
+            SequenceCounter++;
             Function.RemoveAt(Index);
             upperLim = Function.Count();
            
@@ -462,8 +509,28 @@ namespace Yumi_Thesis
             Start_Label.Content = "";
             Start_Label.IsEnabled = false;
             StpWatch.Start();
-            
-            
+
+            F_Button.IsEnabled = true;
+            AVPFS_Button.IsEnabled = true;
+            SB_Button.IsEnabled = true;
+            CC_Button.IsEnabled = true;
+            DB_Button.IsEnabled = true;
+            ACA_Button.IsEnabled = true;
+            DEH_Button.IsEnabled = true;
+            WFM_Button.IsEnabled = true;
+            CFCS_Button.IsEnabled = true;
+            CDSMH_Button.IsEnabled = true;
+            GITS_Button.IsEnabled = true;
+            WH_Button.IsEnabled = true;
+            USH_Button.IsEnabled = true;
+            DD_Button.IsEnabled = true;
+            ATYF_Button.IsEnabled = true;
+            WCP_Button.IsEnabled = true;
+            ATPKC_Button.IsEnabled = true;
+            SHHQ_Button.IsEnabled = true;
+            SD_Button.IsEnabled = true;
+            ASPLSG_Button.IsEnabled = true;
+            DTFMWC_Button.IsEnabled = true;
 
 
 
