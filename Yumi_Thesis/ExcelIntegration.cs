@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Spire.Pdf.Exporting.XPS.Schema;
 using Spire.Xls;
 
 namespace Yumi_Thesis
 {
     class ExcelIntegration
     {
+        Workbook workbook = new Workbook();
         public void CreateExcel()
         {
-            Workbook workbook = new Workbook();
+            
             
 
             try
@@ -34,7 +36,7 @@ namespace Yumi_Thesis
                 sheet2.Range["I1"].Text = "Confusion 3";
                 sheet2.Range["J1"].Text = "Confusion 4";
                 sheet2.Range["K1"].Text = "Confusion 5";
-              
+               
 
                 Worksheet sheet = workbook2.Worksheets[2];
                 sheet.Name = "Masterlist";
@@ -53,6 +55,48 @@ namespace Yumi_Thesis
                 return;
             }
         }
+
+        public List<string> LoadfromExcel(string ParticipantName)
+        {
+            List<string> SeqenceCompleted = new List<string>();
+
+            int lastFilledRow = 0;
+
+
+            Worksheet sheet = workbook.Worksheets[0];
+            for (int i = sheet.LastRow; i >= 0; i--)
+            {
+                CellRange cr = sheet.Rows[i - 1].Columns[0];
+                if (!cr.IsBlank)
+                {
+                    lastFilledRow = i + 1 ;
+                    break;
+                }
+            }
+
+            for(int i = 2; i<lastFilledRow; i++)
+            {
+               
+                 if (sheet.Range["A" + i.ToString()].Text==ParticipantName)
+                {
+                   SeqenceCompleted.Add(sheet.Range["B" + i].Text+".jpg");
+                }
+                else if(sheet.Range["A" + i.ToString()].Text != ParticipantName)
+                {
+                    SeqenceCompleted.Add("");
+                }
+            }
+
+
+            return SeqenceCompleted;
+
+
+
+
+
+        }
+
+
 
         public void WriteToExcel(string ParticipantName,string CurrentSequence, string Accuracy,string MatchingTime, string [] Answers)
         {

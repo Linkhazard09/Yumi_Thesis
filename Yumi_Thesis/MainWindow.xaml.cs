@@ -40,6 +40,7 @@ namespace Yumi_Thesis
         public string CurrentImage;
         public string FirstAnswer ="";
         public string[] Sequence = new string[105];
+        public List<string> SequenceCompleted = new List<string>();
         int SequenceCounter = 0;
         Stopwatch StpWatch = new Stopwatch();
         
@@ -59,12 +60,15 @@ namespace Yumi_Thesis
             }
 
             Next_Button.IsEnabled = false;
-
+           
 
             ExcelIntegration excel = new ExcelIntegration();
 
-            ImagesCounter.Content = upperLim.ToString();
             excel.CreateExcel();
+            SequenceCompleted = excel.LoadfromExcel(ParticipantName);
+            Function = Function.Except(SequenceCompleted).ToList();
+            upperLim = Function.Count()+1;
+            ImagesCounter.Content = upperLim.ToString();
 
             F_Button.IsEnabled = false;
             AVPFS_Button.IsEnabled = false;
@@ -128,8 +132,8 @@ namespace Yumi_Thesis
                 MessageBox.Show("The matching test experiment has been completed you will now be redirected to part 2 which is the preference test experiment.");
                 this.Close();
             }
-
-            ImagesCounter.Content = upperLim.ToString();
+            int x = upperLim + 1;
+            ImagesCounter.Content = x.ToString();
 
             string Current = CurrentImage.Substring(0, 3);
             excel.WriteToExcel(ParticipantName,Current,accuracy,TotalTime,Answers);
@@ -488,6 +492,7 @@ namespace Yumi_Thesis
 
         private void Start_Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            
             Random R1 = new Random();
             int Index = R1.Next(0, upperLim);
             string imgSource = "/Images/"+ Function[Index];
@@ -546,61 +551,12 @@ namespace Yumi_Thesis
     }
 
 
-    [ValueConversion(typeof(string), typeof(string))]
-    public class RatioConverter : MarkupExtension, IValueConverter
-    {
-        private static RatioConverter _instance;
+   
 
-        public RatioConverter() { }
-
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        { // do not let the culture default to local to prevent variable outcome re decimal syntax
-            double size = System.Convert.ToDouble(value) * System.Convert.ToDouble(parameter, CultureInfo.InvariantCulture);
-            return size.ToString("G0", CultureInfo.InvariantCulture);
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        { // read only converter...
-            throw new NotImplementedException();
-        }
-
-        public override object ProvideValue(IServiceProvider serviceProvider)
-        {
-            return _instance ?? (_instance = new RatioConverter());
-        }
-
-    }
+   
 
 
 
 
 }
 
-namespace MyApp.Tools
-{
-
-    [ValueConversion(typeof(string), typeof(string))]
-    public class RatioConverter : MarkupExtension, IValueConverter
-    {
-        private static RatioConverter _instance;
-
-        public RatioConverter() { }
-
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        { // do not let the culture default to local to prevent variable outcome re decimal syntax
-            double size = System.Convert.ToDouble(value) * System.Convert.ToDouble(parameter, CultureInfo.InvariantCulture);
-            return size.ToString("G0", CultureInfo.InvariantCulture);
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        { // read only converter...
-            throw new NotImplementedException();
-        }
-
-        public override object ProvideValue(IServiceProvider serviceProvider)
-        {
-            return _instance ?? (_instance = new RatioConverter());
-        }
-
-    }
-}
