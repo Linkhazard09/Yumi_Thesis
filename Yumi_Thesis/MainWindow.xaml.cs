@@ -66,8 +66,19 @@ namespace Yumi_Thesis
 
             excel.CreateExcel();
             SequenceCompleted = excel.LoadfromExcel(ParticipantName);
+
+            if(SequenceCompleted.Count == Function.Count)
+            {
+                MessageBox.Show("You have already completed the Matching Test Experiment, You will be redirected to the preference test experiment","Completion");
+                var PreferenceTestExperiment = new PreferenceTestExperiment(ParticipantName);
+                PreferenceTestExperiment.Show();
+                this.Close();
+            }
+
+
+
             Function = Function.Except(SequenceCompleted).ToList();
-            upperLim = Function.Count()+1;
+            upperLim = Function.Count();
             ImagesCounter.Content = upperLim.ToString();
 
             F_Button.IsEnabled = false;
