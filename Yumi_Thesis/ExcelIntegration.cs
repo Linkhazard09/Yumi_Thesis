@@ -56,6 +56,100 @@ namespace Yumi_Thesis
             }
         }
 
+        public void CreatePart2()
+        {
+            workbook.LoadFromFile("Experiment Test Results.xls");
+            Worksheet sheet2 = workbook.Worksheets[1];
+            sheet2.Name = "Preference Test Results";
+            sheet2.Range["A1"].Text = "Participant (First & Last Name)";
+            sheet2.Range["B1"].Text = "Sequence";
+            sheet2.Range["C1"].Text = "Unlikeable-Likeable";
+            sheet2.Range["D1"].Text = "Ugly-Beautiful";
+            sheet2.Range["E1"].Text = "Ineffective-Effective";
+            sheet2.Range["F1"].Text = "Vague-Clear";
+            sheet2.Range["G1"].Text = "Weak-Strong";
+            sheet2.Range["H1"].Text = "Unfamiliar-Familiar";
+            sheet2.Range["I1"].Text = "Complex-Simple";
+            sheet2.Range["J1"].Text = "Disorganized-Organized";
+            sheet2.Range["K1"].Text = "Cluttered-Uncluttered";
+            sheet2.Range["L1"].Text = "Unrecognizable-Recognizable";
+            sheet2.Range["M1"].Text = "Abstract-Concrete";
+            sheet2.Range["N1"].Text = "Incompatible-Compatible";
+
+            sheet2 = workbook.Worksheets[2];
+            sheet2.Range["L1"].Text = "Unlikeable-Likeable";
+            sheet2.Range["M1"].Text = "Ugly-Beautiful";
+            sheet2.Range["N1"].Text = "Ineffective-Effective";
+            sheet2.Range["O1"].Text = "Vague-Clear";
+            sheet2.Range["P1"].Text = "Weak-Strong";
+            sheet2.Range["Q1"].Text = "Unfamiliar-Familiar";
+            sheet2.Range["R1"].Text = "Complex-Simple";
+            sheet2.Range["S1"].Text = "Disorganized-Organized";
+            sheet2.Range["T1"].Text = "Cluttered-Uncluttered";
+            sheet2.Range["U1"].Text = "Unrecognizable-Recognizable";
+            sheet2.Range["V1"].Text = "Abstract-Concrete";
+            sheet2.Range["W1"].Text = "Incompatible-Compatible";
+            workbook.SaveToFile("Experiment Test Results.xls");
+
+
+        }
+
+        public void WriteToExcel2(string ParticipantName, string Sequence, int [] Scores)
+        {
+            Workbook wb = new Workbook();
+            wb.LoadFromFile("Experiment Test Results.xls");
+            Worksheet sheet = wb.Worksheets[1];
+            int lastFilledRow = 0;
+
+            for (int i = sheet.LastRow; i >= 0; i--)
+            {
+                CellRange cr = sheet.Rows[i - 1].Columns[0];
+                if (!cr.IsBlank)
+                {
+                    lastFilledRow = i + 1;
+                    break;
+                }
+            }
+
+            sheet.Range["A" + lastFilledRow.ToString()].Text = ParticipantName;
+            sheet.Range["B" + lastFilledRow.ToString()].Text = Sequence;
+            sheet.Range["C" + lastFilledRow.ToString()].NumberValue = Scores[0];
+            sheet.Range["D" + lastFilledRow.ToString()].NumberValue = Scores[1];
+            sheet.Range["E" + lastFilledRow.ToString()].NumberValue = Scores[2];
+            sheet.Range["F" + lastFilledRow.ToString()].NumberValue = Scores[3];
+            sheet.Range["G" + lastFilledRow.ToString()].NumberValue = Scores[4];
+            sheet.Range["H" + lastFilledRow.ToString()].NumberValue = Scores[5];
+            sheet.Range["I" + lastFilledRow.ToString()].NumberValue = Scores[6];
+            sheet.Range["J" + lastFilledRow.ToString()].NumberValue = Scores[7];
+            sheet.Range["K" + lastFilledRow.ToString()].NumberValue = Scores[8];
+            sheet.Range["L" + lastFilledRow.ToString()].NumberValue = Scores[9];
+            sheet.Range["M" + lastFilledRow.ToString()].NumberValue = Scores[10];
+            sheet.Range["N" + lastFilledRow.ToString()].NumberValue = Scores[11];
+
+            sheet = wb.Worksheets[2];
+            sheet.Range["L" + lastFilledRow.ToString()].NumberValue = Scores[0];
+            sheet.Range["M" + lastFilledRow.ToString()].NumberValue = Scores[1];
+            sheet.Range["N" + lastFilledRow.ToString()].NumberValue = Scores[2];
+            sheet.Range["O" + lastFilledRow.ToString()].NumberValue = Scores[3];
+            sheet.Range["P" + lastFilledRow.ToString()].NumberValue = Scores[4];
+            sheet.Range["Q" + lastFilledRow.ToString()].NumberValue = Scores[5];
+            sheet.Range["R" + lastFilledRow.ToString()].NumberValue = Scores[6];
+            sheet.Range["S" + lastFilledRow.ToString()].NumberValue = Scores[7];
+            sheet.Range["T" + lastFilledRow.ToString()].NumberValue = Scores[8];
+            sheet.Range["U" + lastFilledRow.ToString()].NumberValue = Scores[9];
+            sheet.Range["V" + lastFilledRow.ToString()].NumberValue = Scores[10];
+            sheet.Range["W" + lastFilledRow.ToString()].NumberValue = Scores[11];
+
+
+            wb.SaveToFile("Experiment Test Results.xls");
+
+
+
+        }
+
+
+
+
         public List<string> LoadfromExcel(string ParticipantName)
         {
             List<string> SeqenceCompleted = new List<string>();
@@ -96,7 +190,42 @@ namespace Yumi_Thesis
 
         }
 
+        public List<string> LoadfromExcel2(string ParticipantName)
+        {
+            List<string> SeqenceCompleted = new List<string>();
+            int lastFilledRow = 0;
 
+            Worksheet sheet = workbook.Worksheets[1];
+            for (int i = sheet.LastRow; i >= 0; i--)
+            {
+                CellRange cr = sheet.Rows[i - 1].Columns[0];
+                if (!cr.IsBlank)
+                {
+                    lastFilledRow = i + 1;
+                    break;
+                }
+            }
+
+            for (int i = 2; i < lastFilledRow; i++)
+            {
+                 if (sheet.Range["A" + i.ToString()].Text == ParticipantName)
+                {
+                    SeqenceCompleted.Add(sheet.Range["B" + i].Text + ".jpg");
+                }
+                else if (sheet.Range["A" + i.ToString()].Text != ParticipantName)
+                {
+                    SeqenceCompleted.Add("");
+                }
+            }
+
+
+
+            return SeqenceCompleted;
+
+
+
+
+        }
 
         public void WriteToExcel(string ParticipantName,string CurrentSequence, string Accuracy,string MatchingTime, string [] Answers)
         {

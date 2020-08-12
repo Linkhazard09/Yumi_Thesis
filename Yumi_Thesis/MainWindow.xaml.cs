@@ -19,7 +19,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Windows.Markup;
 using System.Globalization;
-
+using MatchingTestExperiment;
 
 namespace Yumi_Thesis
 {
@@ -127,19 +127,25 @@ namespace Yumi_Thesis
             if (isCorrect)
                 accuracy = "1";
 
-            if (upperLim == 0)
-            {
-                MessageBox.Show("The matching test experiment has been completed you will now be redirected to part 2 which is the preference test experiment.");
-                this.Close();
-            }
-            int x = upperLim + 1;
-            ImagesCounter.Content = x.ToString();
+           
+            
 
             string Current = CurrentImage.Substring(0, 3);
             excel.WriteToExcel(ParticipantName,Current,accuracy,TotalTime,Answers);
 
 
 
+            if (upperLim == 0)
+            {
+                MessageBox.Show("The matching test experiment has been completed you will now be redirected to the preference test experiment.", "Preference Test Experiment");
+                var PreferenceTestExperiment = new PreferenceTestExperiment(ParticipantName);
+                PreferenceTestExperiment.Show();
+                this.Close();
+                
+            }
+
+            int x = upperLim;
+            ImagesCounter.Content = x.ToString();
 
 
 
