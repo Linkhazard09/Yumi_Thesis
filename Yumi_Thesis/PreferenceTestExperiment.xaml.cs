@@ -78,9 +78,9 @@ namespace MatchingTestExperiment
 
             string ImgSource = "/Images/" + Sequence[SequenceCtr];
             FunctionImage.Source = new BitmapImage(new Uri(ImgSource, UriKind.Relative));
-            SequenceCtr++;
             int x = Sequence.Count - SequenceCtr;
             ImagesRemainingCounter.Content = x.ToString();
+            SequenceCtr++;           
             Function_Name.Text = Labeltest(ImgSource);
             ClearRadioButton();
 
