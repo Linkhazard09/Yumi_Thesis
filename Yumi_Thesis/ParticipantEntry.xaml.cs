@@ -46,7 +46,11 @@ namespace Yumi_Thesis
 
             string name = ResponseTextBox.Text + " " + LastNameTextBox.Text;
             var MainWindow = new MainWindow(name);
-            MainWindow.Show();
+            try
+            {
+                MainWindow.Show();
+            }
+            catch { return; }
             this.Close();
 
 

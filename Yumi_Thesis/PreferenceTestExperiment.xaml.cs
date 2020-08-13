@@ -41,6 +41,8 @@ namespace MatchingTestExperiment
             Sequence = excel.LoadfromExcel(ParticipantName);
             Completed = excel.LoadfromExcel2(ParticipantName);
             Sequence = Sequence.Except(Completed).ToList();
+            int x = Sequence.Count - SequenceCtr;
+            ImagesRemainingCounter.Content = x.ToString();
             string ImgSource = "/Images/" + Sequence[SequenceCtr];
             FunctionImage.Source = new BitmapImage(new Uri(ImgSource, UriKind.Relative));
             SequenceCtr++;
@@ -68,13 +70,17 @@ namespace MatchingTestExperiment
             ExcelIntegration excel = new ExcelIntegration();
             excel.WriteToExcel2(ParticipantName, Sequence[SequenceCtr-1].Substring(0,3), Scores);
 
+            for (int i = 0; i < 12; i++)
+                Scores[i] = 0;
 
 
-
+           
 
             string ImgSource = "/Images/" + Sequence[SequenceCtr];
             FunctionImage.Source = new BitmapImage(new Uri(ImgSource, UriKind.Relative));
             SequenceCtr++;
+            int x = Sequence.Count - SequenceCtr;
+            ImagesRemainingCounter.Content = x.ToString();
             Function_Name.Text = Labeltest(ImgSource);
             ClearRadioButton();
 

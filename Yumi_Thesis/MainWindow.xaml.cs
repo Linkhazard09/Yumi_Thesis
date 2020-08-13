@@ -129,7 +129,7 @@ namespace Yumi_Thesis
             ExcelIntegration excel = new ExcelIntegration();
             bool isCorrect = CurrentImage.Contains(currentAnswer);
             StpWatch.Stop();
-            string ms = StpWatch.Elapsed.ToString(@"ms");
+            string ms = StpWatch.Elapsed.ToString(@"ff");
             int Secs = Convert.ToInt32(StpWatch.Elapsed.TotalSeconds);
             string TotalTime = Secs + ":" + ms;
             string accuracy="0";
@@ -174,6 +174,8 @@ namespace Yumi_Thesis
             }
             AnswerCounter =0;
             StpWatch.Reset();
+
+            ResetButtons();
             Next_Button.IsEnabled = false ;
             F_Button.IsEnabled = false;
             AVPFS_Button.IsEnabled = false;
@@ -565,6 +567,38 @@ namespace Yumi_Thesis
 
 
         }
+
+        private void ResetButtons()
+        {
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
+
+
+        }
+
+
+
     }
 
 

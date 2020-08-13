@@ -52,6 +52,7 @@ namespace Yumi_Thesis
                 sheet.Range["J1"].Text = "Confusion 4";
                 sheet.Range["K1"].Text = "Confusion 5";
                 workbook2.SaveToFile("Experiment Test Results.xls");
+                workbook.LoadFromFile("Experiment Test Results.xls");
                 return;
             }
         }
