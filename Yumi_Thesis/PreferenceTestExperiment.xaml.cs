@@ -53,7 +53,7 @@ namespace MatchingTestExperiment
         {
            if(SequenceCtr > Sequence.Count())
             {
-                MessageBox.Show("You have evaluated all of the images. Thank you for participating in the experiment. Please forward the Experiment Test Results excel file to //Insert Email Here", "Completion");
+                MessageBox.Show("You have evaluated all of the images. Thank you for participating in the experiment. Please forward the Experiment Test Results excel file to yumibalatbat@gmail.com", "Completion");
                 this.Close();
             }
             
