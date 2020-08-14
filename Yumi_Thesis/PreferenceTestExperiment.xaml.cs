@@ -16,7 +16,7 @@ using Yumi_Thesis;
 namespace MatchingTestExperiment
 {
     /// <summary>
-    /// Interaction logic for PreferenceTestExperiment.xaml
+    /// PreferenceTestExperiment legacy code here for documentation only
     /// </summary>
     public partial class PreferenceTestExperiment : Window
     {

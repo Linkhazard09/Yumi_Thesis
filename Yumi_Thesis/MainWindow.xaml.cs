@@ -69,9 +69,8 @@ namespace Yumi_Thesis
 
             if(SequenceCompleted.Count == Function.Count)
             {
-                MessageBox.Show("You have already completed the Matching Test Experiment, You will be redirected to the preference test experiment","Completion");
-                var PreferenceTestExperiment = new PreferenceTestExperiment(ParticipantName);
-                PreferenceTestExperiment.Show();
+                MessageBox.Show("You have already completed the Matching Test Experiment","Completion");
+             
                 this.Close();
             }
 
@@ -169,9 +168,7 @@ namespace Yumi_Thesis
 
             if (upperLim == 0)
             {
-                MessageBox.Show("The matching test experiment has been completed you will now be redirected to the preference test experiment.", "Preference Test Experiment");
-                var PreferenceTestExperiment = new PreferenceTestExperiment(ParticipantName);
-                PreferenceTestExperiment.Show();
+                MessageBox.Show("The matching test experiment has been completed. Thank you for participating!", "Preference Test Experiment");
                 this.Close();
                 
             }
