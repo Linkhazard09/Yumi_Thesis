@@ -13,14 +13,14 @@
 
 
 
-        
+
         <Image HorizontalAlignment="Right" VerticalAlignment="Top" Source="Images/Mapua Logo-01-01.png" Height="100" Margin="0,10,25,0" Width="100"></Image>
 
         <Image HorizontalAlignment="Right" VerticalAlignment="Top" Source="Images/iemg.jpg" Height="100" Margin="0,10,150,0" Width="100"></Image>
 
         <TextBlock Style="{StaticResource custom}"   FontSize="50" Margin="0,38"  HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="MATCHING TEST"/></TextBlock>
         <TextBlock Text="Experiment" Style="{StaticResource custom}" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75"/>
-        <TextBlock FontSize="25" Style="{StaticResource RegularText}" TextWrapping="Wrap"  VerticalAlignment="Bottom" Height="100" Margin="0,0,50,279.2" HorizontalAlignment="Right" Width="890"><Run Text="In this experiment, you have to match each icon to its correct function name as fast as you can. Click START to begin displaying the icon and select your answer from the choices. Once you're done, click NEXT to proceed to the next icon."/></TextBlock>
+        <TextBlock FontSize="25" Style="{StaticResource RegularText}" TextWrapping="Wrap"  VerticalAlignment="Bottom" Height="100" Margin="0,0,24.4,279.2" HorizontalAlignment="Right" Width="930"><Run Text="In this experiment, you have to match each icon to its correct function name as fast as you can. Click START to begin displaying the icon and select your answer from the choices. Once you're done, click NEXT to proceed to the next icon."/></TextBlock>
         <TextBlock Text="Please type your name here:" Margin="66,0,0,218.2" Style="{StaticResource custom}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
         <TextBox x:Name="ResponseTextBox" GotFocus="ResponseTextBox_GotFocus" Background="LightGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Center" FontSize="15" HorizontalAlignment="Left"  Text="Given Name" TextChanged="ResponseTextBox_TextChanged" Foreground="Gray"  Width="197" Margin="50,0,0,175.2" Height="38" VerticalAlignment="Bottom"/>
         <TextBox x:Name="LastNameTextBox" GotFocus="LastNameTextBox_GotFocus" Foreground="Gray" Text="Last Name" Background="LightGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Center" FontSize="15" TextChanged="ResponseTextBox_TextChanged" Margin="252,0,0,175.2" HorizontalAlignment="Left" Width="207" Height="38" VerticalAlignment="Bottom"/>

@@ -121,6 +121,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = "01";
 
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
 
         }
 
@@ -219,6 +240,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void SB_Button_Click(object sender, RoutedEventArgs e)
@@ -233,6 +275,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -249,6 +312,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void DB_Button_Click(object sender, RoutedEventArgs e)
@@ -263,6 +347,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
 
         }
@@ -280,6 +385,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void DEH_Button_Click(object sender, RoutedEventArgs e)
@@ -294,6 +420,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -310,6 +457,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void CFCS_Button_Click(object sender, RoutedEventArgs e)
@@ -324,6 +492,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -340,6 +529,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void GITS_Button_Click(object sender, RoutedEventArgs e)
@@ -354,6 +564,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -370,6 +601,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void USH_Button_Click(object sender, RoutedEventArgs e)
@@ -384,6 +636,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -400,6 +673,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void ATYF_Button_Click(object sender, RoutedEventArgs e)
@@ -414,6 +708,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -430,6 +745,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void ATPKC_Button_Click(object sender, RoutedEventArgs e)
@@ -444,6 +780,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -460,6 +817,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void SD_Button_Click(object sender, RoutedEventArgs e)
@@ -474,6 +852,27 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
 
         }
 
@@ -490,6 +889,27 @@ namespace Yumi_Thesis
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
 
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            DTFMWC_Button.IsChecked = false;
+
         }
 
         private void DTFMWC_Button_Click(object sender, RoutedEventArgs e)
@@ -505,6 +925,28 @@ namespace Yumi_Thesis
 
             if (FirstAnswer == "")
                 FirstAnswer = currentAnswer;
+
+            F_Button.IsChecked = false;
+            AVPFS_Button.IsChecked = false;
+            SB_Button.IsChecked = false;
+            CC_Button.IsChecked = false;
+            DB_Button.IsChecked = false;
+            ACA_Button.IsChecked = false;
+            DEH_Button.IsChecked = false;
+            WFM_Button.IsChecked = false;
+            CFCS_Button.IsChecked = false;
+            CDSMH_Button.IsChecked = false;
+            GITS_Button.IsChecked = false;
+            WH_Button.IsChecked = false;
+            USH_Button.IsChecked = false;
+            DD_Button.IsChecked = false;
+            ATYF_Button.IsChecked = false;
+            WCP_Button.IsChecked = false;
+            ATPKC_Button.IsChecked = false;
+            SHHQ_Button.IsChecked = false;
+            SD_Button.IsChecked = false;
+            ASPLSG_Button.IsChecked = false;
+          
 
 
         }

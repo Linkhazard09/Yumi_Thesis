@@ -122,7 +122,9 @@
     <Resource Include="Fonts\theboldfont.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Fonts\BebasNeue-Regular.ttf" />
+    <Resource Include="Fonts\BebasNeue-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Fonts\MADE TOMMY Black_PERSONAL USE.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

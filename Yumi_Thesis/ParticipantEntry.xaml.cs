@@ -50,7 +50,9 @@ namespace Yumi_Thesis
             {
                 MainWindow.Show();
             }
-            catch { return; }
+            catch {
+                this.Close();
+                return; }
             this.Close();
 
 

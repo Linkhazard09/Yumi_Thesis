@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Spire.Pdf.Exporting.XPS.Schema;
 using Spire.Xls;
 
@@ -51,15 +52,32 @@ namespace Yumi_Thesis
                 sheet.Range["I1"].Text = "Confusion 3";
                 sheet.Range["J1"].Text = "Confusion 4";
                 sheet.Range["K1"].Text = "Confusion 5";
-                workbook2.SaveToFile("Experiment Test Results.xls");
-                workbook.LoadFromFile("Experiment Test Results.xls");
+
+                try
+                {
+                    workbook2.SaveToFile("Experiment Test Results.xls");
+                    workbook.LoadFromFile("Experiment Test Results.xls");
+                }
+                catch
+                {
+                    MessageBox.Show("Error in loading or saving to the excel file, please ensure that the excel file is currently closed and restart the application.", "Error in Excel");
+                    return;
+                }
                 return;
             }
         }
 
         public void CreatePart2()
         {
-            workbook.LoadFromFile("Experiment Test Results.xls");
+            try
+            {
+                workbook.LoadFromFile("Experiment Test Results.xls");
+            }
+            catch
+            {
+                MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                return;
+            }
             Worksheet sheet2 = workbook.Worksheets[1];
             sheet2.Name = "Preference Test Results";
             sheet2.Range["A1"].Text = "Participant (First & Last Name)";
@@ -90,7 +108,16 @@ namespace Yumi_Thesis
             sheet2.Range["U1"].Text = "Unrecognizable-Recognizable";
             sheet2.Range["V1"].Text = "Abstract-Concrete";
             sheet2.Range["W1"].Text = "Incompatible-Compatible";
-            workbook.SaveToFile("Experiment Test Results.xls");
+
+            try
+            {
+                workbook.SaveToFile("Experiment Test Results.xls");
+            }
+            catch
+            {
+                MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                return;
+            }
 
 
         }
@@ -98,7 +125,15 @@ namespace Yumi_Thesis
         public void WriteToExcel2(string ParticipantName, string Sequence, int [] Scores)
         {
             Workbook wb = new Workbook();
-            wb.LoadFromFile("Experiment Test Results.xls");
+            try
+            {
+                wb.LoadFromFile("Experiment Test Results.xls");
+            }
+            catch
+            {
+                MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                return;
+            }
             Worksheet sheet = wb.Worksheets[1];
             int lastFilledRow = 0;
 
@@ -141,9 +176,15 @@ namespace Yumi_Thesis
             sheet.Range["V" + lastFilledRow.ToString()].NumberValue = Scores[10];
             sheet.Range["W" + lastFilledRow.ToString()].NumberValue = Scores[11];
 
-
-            wb.SaveToFile("Experiment Test Results.xls");
-
+            try
+            {
+                wb.SaveToFile("Experiment Test Results.xls");
+            }
+            catch
+            {
+                MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                return;
+            }
 
 
         }
@@ -176,10 +217,7 @@ namespace Yumi_Thesis
                 {
                    SeqenceCompleted.Add(sheet.Range["B" + i].Text+".jpg");
                 }
-                else if(sheet.Range["A" + i.ToString()].Text != ParticipantName)
-                {
-                    SeqenceCompleted.Add("");
-                }
+              
             }
 
 
@@ -213,10 +251,7 @@ namespace Yumi_Thesis
                 {
                     SeqenceCompleted.Add(sheet.Range["B" + i].Text + ".jpg");
                 }
-                else if (sheet.Range["A" + i.ToString()].Text != ParticipantName)
-                {
-                    SeqenceCompleted.Add("");
-                }
+               
             }
 
 
@@ -232,7 +267,15 @@ namespace Yumi_Thesis
         {
 
             Workbook wb = new Workbook();
-            wb.LoadFromFile("Experiment Test Results.xls");
+            try
+            {
+                wb.LoadFromFile("Experiment Test Results.xls");
+            }
+            catch
+            {
+                MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                return;
+            }
             Worksheet sheet = wb.Worksheets[0];
             int lastFilledRow = 0;
 
@@ -315,9 +358,15 @@ namespace Yumi_Thesis
 
 
 
-
-            wb.SaveToFile("Experiment Test Results.xls");
-
+            try
+            {
+                wb.SaveToFile("Experiment Test Results.xls");
+            }
+            catch
+            {
+                MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                return;
+            }
 
 
 
