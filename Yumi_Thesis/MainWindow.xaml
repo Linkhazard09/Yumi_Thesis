@@ -14,7 +14,7 @@
 
 
 
-        <Rectangle Margin="369,380,367.8,100.6" Stroke="Black"/>
+        <Rectangle Margin="383,375,376.8,117.6" Stroke="Black"/>
 
 
 
@@ -26,14 +26,14 @@
         <ToggleButton x:Name="SB_Button" Checked="SB_Button_Click" Content="Shortness of Breath" Margin="99,180,658.6,313.6"/>
         <ToggleButton x:Name="CC_Button" Checked="CC_Button_Click" Content="Cough or Cold" Margin="99,129,658.6,364.6" RenderTransformOrigin="0.506,4.746"/>
         <ToggleButton x:Name="DB_Button" Checked="DB_Button_Click" Content="Difficulty in Breathing" Margin="99,229,658.6,264.6"/>
-        <ToggleButton x:Name="ACA_Button" Checked="ACA_Button_Click" Content="Avoid Contact with Animals" Margin="380,455,379.8,35"/>
+        <ToggleButton x:Name="ACA_Button" Checked="ACA_Button_Click" Content="Avoid Contact with Animals" Margin="383,431,376.8,58.6"/>
         <ToggleButton x:Name="DEH_Button" Checked="DEH_Button_Click" Content="Drink and Eat Healthy" Margin="99,435,658.6,58.6"/>
         <ToggleButton x:Name="WFM_Button" Checked="WFM_Button_Click" Content="Wear Face Mask" Margin="657,78,100.6,415.6"/>
         <ToggleButton x:Name="CFCS_Button" Checked="CFCS_Button_Click" Margin="99,280,658.6,213.6">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center"><Run Text="Cover Face When Coughing or Sneezing"/></TextBlock>
         </ToggleButton>
         <ToggleButton x:Name="CDSMH_Button" Checked="CDSMH_Button_Click" Margin="99,378,658.6,115.6">
-            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Width="139"><Run Text="Consult Doctor/Seek Medical Health"/></TextBlock>
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Width="139" Height="35"><Run Text="Consult Doctor/Seek Medical Health"/></TextBlock>
         </ToggleButton>
 
         <ToggleButton x:Name="GITS_Button" Checked="GITS_Button_Click"  Margin="657,129,100.6,364.6">
@@ -61,9 +61,10 @@
         <ToggleButton x:Name="DTFMWC_Button" Checked="DTFMWC_Button_Click" Margin="657,280,100.6,213.6">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="148" Height="35"><Run Text="Dispose Tissue and Facemask in Waste Cans"/></TextBlock>
         </ToggleButton>
-        <Label x:Name="Next_Button" Content="Next" FontSize="35" MouseLeftButtonUp="Label_MouseLeftButtonUp" HorizontalContentAlignment="Center" Style="{StaticResource custom}" Margin="369,380,367.8,100.6"/>
+        <Label x:Name="Next_Button" Content="Next" FontSize="35" MouseLeftButtonUp="Label_MouseLeftButtonUp" HorizontalContentAlignment="Center" Style="{StaticResource custom}" Margin="383,369,376.8,118.6"/>
         <Label Content="Images Remaining:" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top"/>
         <Label x:Name="ImagesCounter" Content="100" HorizontalAlignment="Right" VerticalAlignment="Top"  ></Label>
+        <Label Content="Program developed by Matthew Paladine Rivera" Opacity="0.30" HorizontalAlignment="Left" Margin="10,503,0,0" VerticalAlignment="Top" Width="270"/>
 
 
     </Grid>

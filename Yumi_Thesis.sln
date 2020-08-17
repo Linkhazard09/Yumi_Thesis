@@ -5,16 +5,20 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingTestExperiment", "Yumi_Thesis\MatchingTestExperiment.csproj", "{84409CEB-1C33-467D-9A82-E0903F0740EC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MatchingTestInstaller", "MatchingTestInstaller\MatchingTestInstaller.vdproj", "{BF86D0EC-D182-4BF9-997B-31895B49D4FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84409CEB-1C33-467D-9A82-E0903F0740EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84409CEB-1C33-467D-9A82-E0903F0740EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84409CEB-1C33-467D-9A82-E0903F0740EC}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{84409CEB-1C33-467D-9A82-E0903F0740EC}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{84409CEB-1C33-467D-9A82-E0903F0740EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84409CEB-1C33-467D-9A82-E0903F0740EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF86D0EC-D182-4BF9-997B-31895B49D4FA}.Debug|Any CPU.ActiveCfg = Debug
+		{BF86D0EC-D182-4BF9-997B-31895B49D4FA}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
